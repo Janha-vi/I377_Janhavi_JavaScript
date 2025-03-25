@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.js"></script>
+</head>
+<body>
+    <h2>Task Manager</h2>
+    <div class="task-input-container">
+        <input type="text" id="taskName" style="font-family: 'Times New Roman', Times, serif; border-radius: 20px;" placeholder="Enter Task Name">
+        <input type="text" id="taskDesc" style="font-family: 'Times New Roman', Times, serif; border-radius: 20px;" placeholder="Enter Task Description">
+        <div class="button">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <div id="calendar"></div>
+    </div>
+
+    <div class="task-container">
+        <h3 style="color: #f1e5cb;">Task List</h3>
+        <div class="task-filter">
+            <select id="filter" onchange="adjustDropdownWidth()">
+                <option value="all" style="width: 75px; font-family: 'Times New Roman', Times, serif;">All</option>
+                <option value="completed" style="font-family: 'Times New Roman', Times, serif;">Completed </option>
+                <option value="pending" style="font-family: 'Times New Roman', Times, serif;">Pending</option>
+                <option value="important" style="font-family: 'Times New Roman', Times, serif;">Important</option>
+            </select>
+        </div>
+        <div id="taskList"></div>
+    </div>   
+
+    <script src="logic.js"></script>
+</body>
+</html>
